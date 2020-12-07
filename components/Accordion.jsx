@@ -12,9 +12,13 @@ const Accordion = ({ content, title }) => {
 		<>
 			<div
 				onClick={() => showFAQ()}
-				className='flex items-center pb-2 justify-between pt-2'
+				className={
+					show
+						? 'flex items-center pb-2 justify-between pt-2 rounded-md p-2 bg-gray-100'
+						: 'flex items-center pb-2 justify-between pt-2 hover:bg-gray-100 rounded-md p-2'
+				}
 			>
-				<h4 className='text-xl'>{title}</h4>
+				<h4 className='text-xl container'>{title}</h4>
 				{show ? (
 					<svg
 						className='w-5 h-5 items-center'
